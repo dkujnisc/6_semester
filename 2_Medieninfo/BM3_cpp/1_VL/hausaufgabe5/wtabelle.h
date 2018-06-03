@@ -14,6 +14,7 @@ private:
    int jetzt;
    int jetzigeW;
 public:
+   int anzahlSymbole;
    ClWTabelle() { symbol=NULL; wert=NULL; waehrung=NULL; status=undefiniert;}
    ~ClWTabelle() { return; }
    void oeffnen(char *);

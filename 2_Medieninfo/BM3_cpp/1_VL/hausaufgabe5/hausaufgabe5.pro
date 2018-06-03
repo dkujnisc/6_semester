@@ -25,3 +25,5 @@ INSTALLS += data
 
 DISTFILES += \
     waehrung.txt
+
+QMAKE_LFLAGS += -v
