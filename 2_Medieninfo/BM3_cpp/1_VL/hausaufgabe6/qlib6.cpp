@@ -35,55 +35,53 @@ strcpy(neu->inhalt,zkette);
 neu->naechstes=NULL;
 cout << neu->inhalt << endl;
 int aktuellesPopItem= atoi(neu->inhalt);
-if(zaehler!=0){
-    // ermittlung des vorgaengers=start
-    struct satom *vorgaenger = start;
-
-    int vorgaengerWert= atoi(vorgaenger->inhalt);
-    for(int i=0;i<zaehler;i++){
-        if(NULL!=vorgaenger->naechstes){
-            struct satom *nachfolger = vorgaenger->naechstes;
-            int nachfolgerWert = atoi(nachfolger->inhalt);
-
-            if(vorgaengerWert<=aktuellesPopItem && aktuellesPopItem<=nachfolgerWert){
-                cout << "vorgaenger -neu -nachfolger" << endl;
-                cout << vorgaenger->inhalt << "-" << neu->inhalt << "-" << nachfolger->inhalt << endl;
-                //vorgaenger -neu -nachfolger
-                vorgaenger->naechstes=neu;
-                neu->naechstes=nachfolger;
-                break;
-            }
-        }else{
-            //vorgaenger=6;
-            //aktuellesPopItem=4
-            if(vorgaengerWert<=aktuellesPopItem){
-                cout << "vorgaenger - neu"<< endl;
-                //vorgaenger - neu
-                vorgaenger->naechstes=neu;
-                end=neu;
-                break;
-            }else{
-                cout << "neu - vorgaenger"<< endl;
-                //neu - vorgaenger
-                start=neu;
-                neu->naechstes=vorgaenger;
-                end=vorgaenger;
-                vorgaenger->naechstes=NULL;
-                break;
-            }
-        }
-    }
-
-}else{
+if(zaehler==0){
     cout << "erster eintrag"<< endl;
     //wird nur aufgerufen wenn das erste element reingestellt wird,
     start=neu;
     end=neu;
+    zaehler++;
+    return;
 }
-zaehler++;
-cout << "inkrementi"<< endl;
+struct satom *anfang = start;
+int anfangWert= atoi(anfang->inhalt);
+
+if(anfangWert<=aktuellesPopItem){
+    cout << "B" << endl;
+    neu->naechstes=anfang;
+    start=neu;
+    zaehler++;
+    return;
+}
+struct satom *ende = end;
+int endWert= atoi(ende->inhalt);
+if(endWert>=aktuellesPopItem){
+    cout << "C" << endl;
+
+    ende->naechstes=neu;
+    end=neu;
+    zaehler++;
+    return;
 }
 
+// ermittlung des vorgaengers=start
+struct satom *vorgaenger = start;
+struct satom *nachfolger = vorgaenger->naechstes;
+while(NULL != vorgaenger->naechstes){
+    int vorgaengerWert = atoi(vorgaenger->inhalt);
+    int nachfolgerWert = atoi(nachfolger->inhalt);
+    cout << vorgaenger->inhalt <<"-"<<neu->inhalt<<"-"<<nachfolger->inhalt<<endl;
+    if(vorgaengerWert<= aktuellesPopItem && aktuellesPopItem <= nachfolgerWert){
+              vorgaenger->naechstes=neu;
+              neu->naechstes=nachfolger;
+              zaehler++;
+              return;
+    }
+    vorgaenger = nachfolger;
+    nachfolger = vorgaenger->naechstes;
+}
+cout << "NICHT GUT weil eigentlich hätte eine der bedinungen zutreffen müssen"<< "-" << start->inhalt<< "-" << end->inhalt<< "-" << neu->inhalt << endl;
+}
 char *ClQueue::pop(void)
 {
 char *wert;

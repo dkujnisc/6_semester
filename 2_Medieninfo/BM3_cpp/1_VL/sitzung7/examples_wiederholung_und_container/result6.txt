@@ -1,0 +1,4 @@
+Array am Anfang: F Array am Anfang: D Array am Anfang: A Array am Anfang: C Array am Anfang: B Array am Anfang: E 
+Liste am Anfang: F Liste am Anfang: D Liste am Anfang: A Liste am Anfang: C Liste am Anfang: B Liste am Anfang: E 
+Array am Ende: F Array am Ende: D Array am Ende: A Array am Ende: C Array am Ende: B Array am Ende: E 
+Liste am Ende: A Liste am Ende: B Liste am Ende: C Liste am Ende: D Liste am Ende: E Liste am Ende: F 

@@ -1,0 +1,8 @@
+Array 1 am Anfang: Wybel Array 1 am Anfang: Ebert Array 1 am Anfang: Adrian 
+Liste 1 am Anfang: Mayer Liste 1 am Anfang: Müller Liste 1 am Anfang: Schmitz 
+Array 1 später: Adrian Array 1 später: Ebert Array 1 später: Wybel 
+Liste 1 später: Mayer Liste 1 später: Müller Liste 1 später: Schmitz 
+Array 2 / Schritt 2: Adrian Array 2 / Schritt 2: Ebert Array 2 / Schritt 2: Wybel 
+Array 2 / Schritt 3: Schmitz Array 2 / Schritt 3: Müller Array 2 / Schritt 3: Mayer Array 2 / Schritt 3: Adrian Array 2 / Schritt 3: Ebert Array 2 / Schritt 3: Wybel 
+Liste 2 vor dem Ende: Mayer Liste 2 vor dem Ende: Adrian Liste 2 vor dem Ende: Ebert Liste 2 vor dem Ende: Wybel 
+Liste 2 am Ende: Adrian Liste 2 am Ende: Ebert Liste 2 am Ende: Mayer Liste 2 am Ende: Wybel 

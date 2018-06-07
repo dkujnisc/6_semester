@@ -1,0 +1,12 @@
+Array: 0
+Array: 1
+Array: 2
+Array: 3
+Array: 4
+Array: 5
+Liste: 0
+Liste: 1
+Liste: 2
+Liste: 3
+Liste: 4
+Liste: 5
