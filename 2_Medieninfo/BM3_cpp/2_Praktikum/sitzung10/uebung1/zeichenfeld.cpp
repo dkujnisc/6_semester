@@ -37,10 +37,6 @@ void zeichenFeld::paintEvent(QPaintEvent * )
         painter.drawEllipse(x+(i*10),y+(i*10),50,50);
     }
 
-
-
-
-
     if (increment)
         switch(phase)
         {

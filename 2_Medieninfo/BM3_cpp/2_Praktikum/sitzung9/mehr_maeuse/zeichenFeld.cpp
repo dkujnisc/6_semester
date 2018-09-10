@@ -63,7 +63,7 @@ void zeichenFeld::deserialize(QFile &file)
         return;
     }
 
-    in >> c; // Leerstellen werden vom '>>' Operator 'konmsumiert';
+    in >> c; // Leerstellen werden vom '>>' Operator 'konsumiert';
     // Zeilenenden nicht.
 
     while (in.status() == QTextStream::Ok)
